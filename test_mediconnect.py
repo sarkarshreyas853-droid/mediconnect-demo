@@ -104,8 +104,6 @@ def test_emergency_words_are_detected():
 
 def test_normal_symptoms_are_not_emergencies():
     assert not triage.is_emergency("itchy skin rash for a week")
-    def test_distance_is_zero_for_same_point():
-     assert services.distance_km(22.57, 88.36, 22.57, 88.36) == 0
 
 
 def test_distance_known_value():

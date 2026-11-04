@@ -35,6 +35,7 @@ doctors = services.sort_by_distance(services.search_doctors(specialty, name_quer
 if doctors:
     st.dataframe(pd.DataFrame(doctors)[["name", "specialty", "city", "distance_km"]], hide_index=True)
 else:
+    st.header("Book an appointment")
     st.info("No doctors match your search.")
 if doctors:
     doctor = st.selectbox("Doctor", doctors, format_func=lambda d: f"{d['name']} ({d['specialty']})")
@@ -55,7 +56,6 @@ if doctors:
 else:
     st.info("No doctors found.")
 
-st.header("Nearby pharmacies")
 st.header("My appointments")
 lookup = st.text_input("Enter the name you booked with", key="lookup_name")
 if lookup.strip():
