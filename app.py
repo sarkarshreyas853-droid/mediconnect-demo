@@ -35,8 +35,9 @@ doctors = services.sort_by_distance(services.search_doctors(specialty, name_quer
 if doctors:
     st.dataframe(pd.DataFrame(doctors)[["name", "specialty", "city", "distance_km"]], hide_index=True)
 else:
-    st.header("Book an appointment")
     st.info("No doctors match your search.")
+
+st.header("Book an appointment")
 if doctors:
     doctor = st.selectbox("Doctor", doctors, format_func=lambda d: f"{d['name']} ({d['specialty']})")
     day = st.date_input("Date", min_value=date.today())
