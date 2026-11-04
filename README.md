@@ -2,6 +2,8 @@
 
 ![tests](https://github.com/sarkarshreyas853-droid/mediconnect-demo/actions/workflows/tests.yml/badge.svg)
 
+**Live demo:**https://mediconnect-demo-kgvp7dmgwqfhurneroxmhe.streamlit.app/
+
 A demo healthcare web app: find doctors and pharmacies on a map, book appointments, and get an AI suggestion for which type of specialist to see.
 
 > **Demo only.** All doctors, pharmacies and locations are made-up sample data. It is not a real medical service, takes no payments, sells no medicine and gives no medical advice.
@@ -12,7 +14,7 @@ A demo healthcare web app: find doctors and pharmacies on a map, book appointmen
 - **My appointments:** look up bookings by name and cancel them, which frees the slot.
 - **Nearby pharmacies and map:** sample doctors and pharmacies shown on a map, sorted by distance.
 - **Symptom-to-specialist helper:** an LLM (Groq) suggests a type of doctor from a description of symptoms. It only chooses from the specialties in the database, never diagnoses, and always shows a disclaimer.
-- **Emergency safeguard:** symptoms such as "chest pain" skip the AI and show an emergency message instead..
+- **Emergency safeguard:** symptoms such as "chest pain" skip the AI and show an emergency message instead.
 
 ## Tech
 Python, Streamlit, SQLite, pandas, Groq API, pytest, GitHub Actions.
@@ -52,7 +54,6 @@ pytest -v
 
 ## Limitations
 - Sample data only; no real doctors, pharmacies or users.
-- No login or accounts.
 - Appointments are looked up by name only, so anyone who knows a name could cancel its bookings.
 - The emergency check is a simple keyword list, not a clinical tool.
 - The AI suggestion can be wrong and is not medical advice.
