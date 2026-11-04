@@ -12,7 +12,7 @@ A demo healthcare web app: find doctors and pharmacies on a map, book appointmen
 - **My appointments:** look up bookings by name and cancel them, which frees the slot.
 - **Nearby pharmacies and map:** sample doctors and pharmacies shown on a map, sorted by distance.
 - **Symptom-to-specialist helper:** an LLM (Groq) suggests a type of doctor from a description of symptoms. It only chooses from the specialties in the database, never diagnoses, and always shows a disclaimer.
-- **Emergency safeguard:** symptoms such as "chest pain" skip the AI and show an emergency message instead.
+- **Emergency safeguard:** symptoms such as "chest pain" skip the AI and show an emergency message instead..
 
 ## Tech
 Python, Streamlit, SQLite, pandas, Groq API, pytest, GitHub Actions.
@@ -57,5 +57,6 @@ pytest -v
 - The emergency check is a simple keyword list, not a clinical tool.
 - The AI suggestion can be wrong and is not medical advice.
 
+- Appointments are looked up by name only, with no login, so anyone who knows a name could cancel its bookings.
 ## Author
 Shreyas Sarkar
