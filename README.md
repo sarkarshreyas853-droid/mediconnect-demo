@@ -28,9 +28,8 @@ streamlit run app.py
 
 ## Tests
 ```
-pytest -v
-```
-11 tests cover booking, double-booking prevention, input validation, specialty search and emergency detection. Each test uses its own temporary database.
+21 tests cover booking, double-booking prevention, cancellation permissions, input validation, doctor search, distance sorting and emergency detection. Each test uses its own temporary database. Tests run automatically on every push with GitHub Actions.
+
 
 ## Limitations
 - Sample data only; no real doctors, pharmacies or users.
@@ -38,5 +37,6 @@ pytest -v
 - The emergency check is a simple keyword list, not a clinical tool.
 - The AI suggestion can be wrong and is not medical advice.
 
+- Appointments are looked up by name only, with no login, so anyone who knows a name could cancel its bookings.
 ## Author
 Shreyas Sarkar
